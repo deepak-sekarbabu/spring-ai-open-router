@@ -67,7 +67,6 @@ Purrs a gentle song
 ```mermaid
 graph TD;
   Client-->REST_API[Spring Boot REST API];
-  REST_API-->AI_Service[AI Decision Service];
   REST_API-->Oper_Router[Oper Router API]; 
   Oper_Router-->External_Systems[External Systems];
 ```
