@@ -1,34 +1,79 @@
-# Spring AI Demo Application
+# Spring AI Oper Router Backend
 
-This is a Spring Boot application demonstrating AI-powered text generation using OpenAI-compatible APIs via Spring AI.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
+## Overview
+
+Spring AI Oper Router Backend is a Java Spring Boot application that serves as an intelligent backend for routing and automation tasks. Leveraging AI-powered decision-making and seamless integration with the Oper Router APIs, this backend enables dynamic, context-aware automation and workflow orchestration for modern enterprise systems.
 
 ## Features
-- REST endpoint to generate a cat-themed haiku using AI
-- Environment variable management via `.env` and Spring configuration
 
-## Project Structure
-- `config/` - Configuration classes
-- `controller/` - REST controllers
-- `service/` - Service interfaces and implementations
+- **Oper Router API Integration**: Connects to Oper Router APIs for advanced routing and automation.
+- **RESTful Endpoints**: Exposes clean, documented REST APIs for integration with frontend or other services.
+- **Environment-based Configuration**: Securely manages API keys and environment variables via `.env` and Spring config.
+
+## Tech Stack
+
+- Java 21+
+- Spring Boot
+- Maven or Gradle
+- Oper Router API
+- AI Libraries: OpenAI, spring-ai-openai-spring-boot-starter
 
 ## Getting Started
 
-1. **Clone the repository**
-2. **Set up your `.env` file** (see `.env.example`)
-3. **Build and run**:
-   ```sh
-   mvn clean spring-boot:run
-   ```
-4. **Access the endpoint**:
-   - `GET /ai/cathaiku`
+### Prerequisites
+- Java 21 or higher
+- Maven 3.8+ (or Gradle)
+- Oper Router API credentials
+- (Optional) OpenAI or other AI provider API keys
 
-## Configuration
+### Clone and Build
+
+```sh
+# Clone the repository
+git clone https://github.com/deepak-sekarbabu/spring-ai-open-router
+cd spring-ai-open-router
+
+# Copy and edit environment variables
+cp .env.example .env
+# Edit .env to add your API keys
+
+# Build and run
+mvn clean spring-boot:run
+```
+
+### Configuration
 - Edit `src/main/resources/application.yml` for model and API settings.
-- Place your OpenAI-compatible API key in `.env` as `OPENAI_API_KEY`.
+- Place your API keys in `.env` (e.g., `OPER_ROUTER_API_KEY`, `OPENAI_API_KEY`).
 
-## Requirements
-- Java 21+
-- Maven 3.8+
+## Usage
+
+### Example: Route Automation Request
+
+```sh
+curl --location 'http://localhost:8080/ai/cathaiku'
+```
+
+**Sample Response:**
+```
+Cat in quiet night
+Whiskers dance in moon's soft light
+Purrs a gentle song
+```
+
+## Architecture
+
+```mermaid
+graph TD;
+  Client-->REST_API[Spring Boot REST API];
+  REST_API-->AI_Service[AI Decision Service];
+  REST_API-->Oper_Router[Oper Router API];
+  AI_Service-->OpenAI[OpenAI/DL4J];
+  Oper_Router-->External_Systems[External Systems];
+```
+
 
 ## License
-MIT
+
+This project is licensed under the [MIT License](LICENSE).
