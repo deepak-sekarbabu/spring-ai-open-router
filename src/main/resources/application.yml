@@ -1,0 +1,9 @@
+spring:
+  ai:
+    openai.api-key: ${OPENAI_API_KEY}
+    openai:
+      chat:
+        options:
+          model: openrouter/cypher-alpha:free
+        base-url: "https://openrouter.ai/api"
+
