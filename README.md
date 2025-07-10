@@ -4,21 +4,21 @@
 
 ## Overview
 
-Spring AI Oper Router Backend is a Java Spring Boot application that serves as an intelligent backend for routing and automation tasks. Leveraging AI-powered decision-making and seamless integration with the Oper Router APIs, this backend enables dynamic, context-aware automation and workflow orchestration for modern enterprise systems.
+Spring AI Oper Router Backend is a Java Spring Boot application that serves as an intelligent backend for routing and automation tasks. Leveraging AI-powered decision-making and seamless integration with the Oper Router APIs, this backend enables a simple demonstration for getting started.
 
 ## Features
 
 - **Oper Router API Integration**: Connects to Oper Router APIs for advanced routing and automation.
-- **RESTful Endpoints**: Exposes clean, documented REST APIs for integration with frontend or other services.
-- **Environment-based Configuration**: Securely manages API keys and environment variables via `.env` and Spring config.
+- **RESTful Endpoints**: Exposes clean, documented REST APIs for getting cat facts.
+- **Environment-based Configuration**: Securely manages API keys and environment variables via `.env`
 
 ## Tech Stack
 
 - Java 21+
 - Spring Boot
-- Maven or Gradle
+- Maven
 - Oper Router API
-- AI Libraries: OpenAI, spring-ai-openai-spring-boot-starter
+- AI Libraries:  spring-ai-openai-spring-boot-starter
 
 ## Getting Started
 
@@ -26,7 +26,7 @@ Spring AI Oper Router Backend is a Java Spring Boot application that serves as a
 - Java 21 or higher
 - Maven 3.8+ (or Gradle)
 - Oper Router API credentials
-- (Optional) OpenAI or other AI provider API keys
+- OpenAI or other AI provider API keys
 
 ### Clone and Build
 
@@ -68,7 +68,7 @@ Purrs a gentle song
 graph TD;
   Client-->REST_API[Spring Boot REST API];
   REST_API-->Oper_Router[Oper Router API]; 
-  Oper_Router-->External_Systems[External Systems];
+  Oper_Router-->LLM[Models];
 ```
 
 ## License
