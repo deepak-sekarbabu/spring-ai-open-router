@@ -68,11 +68,9 @@ Purrs a gentle song
 graph TD;
   Client-->REST_API[Spring Boot REST API];
   REST_API-->AI_Service[AI Decision Service];
-  REST_API-->Oper_Router[Oper Router API];
-  AI_Service-->OpenAI[OpenAI/DL4J];
+  REST_API-->Oper_Router[Oper Router API]; 
   Oper_Router-->External_Systems[External Systems];
 ```
-
 
 ## License
 
